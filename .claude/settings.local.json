@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import PIL; print\\(PIL.__version__\\)\")",
+      "Bash(python3 -m pip install Pillow -q)",
+      "Bash(python3 -c \"from PIL import Image; print\\(''OK''\\)\")",
+      "Bash(brew install:*)",
+      "Bash(magick --version)",
+      "Bash(magick /tmp/logo_extracted.png -format \"%wx%h\" info:)",
+      "Bash(magick /tmp/logo_extracted.png -format \"%[pixel:u.p{0,0}]\" info:)"
+    ]
+  }
+}
