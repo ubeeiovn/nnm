@@ -1,4 +1,7 @@
+"use client";
+
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.svg";
 
@@ -8,7 +11,7 @@ const Navbar = () => {
   const links = [
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
-    { label: "Products", href: "#products" },
+    { label: "Services", href: "#services" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -28,7 +31,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <a href="#hero" onClick={(e) => handleNavClick(e, "#hero")} className="flex items-center gap-3">
-          <img src={logo} alt="NNM Import and Export" className="h-16 w-auto" />
+          <Image src={logo} alt="NNM Import and Export" className="h-16 w-auto" height={64} />
         </a>
 
         {/* Desktop */}

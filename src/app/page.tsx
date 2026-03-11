@@ -5,7 +5,7 @@ import ProductsSection from "@/components/ProductsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -16,6 +16,4 @@ const Index = () => {
       <Footer />
     </div>
   );
-};
-
-export default Index;
+}

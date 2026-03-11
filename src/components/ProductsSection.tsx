@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 
 const services = [
@@ -25,7 +27,7 @@ const services = [
 
 const ProductsSection = () => {
   return (
-    <section id="products" className="py-24 md:py-32 bg-background">
+    <section id="services" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -1,4 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
+import Image from "next/image";
 import agaveField from "@/assets/agave-field.jpg";
 import distillery from "@/assets/distillery.jpg";
 
@@ -36,7 +39,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img
+            <Image
               src={agaveField}
               alt="Trade between Vietnam and Canada"
               className="w-full aspect-[4/3] object-cover rounded-sm"
@@ -75,7 +78,7 @@ const AboutSection = () => {
               <strong className="text-foreground">CPTPP Mastery:</strong> We specialize in maximizing duty-free access under the CPTPP, ensuring all shipments strictly adhere to Rules of Origin to provide our clients with the most competitive tariff treatments.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Regulatory Precision:</strong> Our team handles full documentation for both markets, from Canadian Export Declarations to Vietnam's import compliance requirements.
+              <strong className="text-foreground">Regulatory Precision:</strong> Our team handles full documentation for both markets, from Canadian Export Declarations to Vietnam&apos;s import compliance requirements.
             </p>
           </motion.div>
 
@@ -86,7 +89,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="md:order-2"
           >
-            <img
+            <Image
               src={distillery}
               alt="Compliance and trade operations"
               className="w-full aspect-[4/3] object-cover rounded-sm"
