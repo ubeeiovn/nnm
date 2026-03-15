@@ -3,6 +3,9 @@ import "../index.css";
 import { LangProvider } from "@/lib/i18n";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇨🇦</text></svg>",
+  },
   title: "NNM Import & Export Inc",
   description: "A federally incorporated Canadian company empowering businesses through reliable trade of consumer goods between Vietnam and Canada.",
   authors: [{ name: "NNM Import & Export Inc" }],
