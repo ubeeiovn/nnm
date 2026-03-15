@@ -2,17 +2,14 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import agaveField from "@/assets/agave-field.jpg";
-import distillery from "@/assets/distillery.jpg";
-
-const values = [
-  { label: "Integrity", desc: "We operate with full transparency and honesty in every trade." },
-  { label: "Customer Focus", desc: "Your business goals are at the center of everything we do." },
-  { label: "Global Awareness", desc: "Deep knowledge of international trade, tariffs, and regulations." },
-  { label: "Operational Excellence", desc: "Precise documentation and compliance at every step." },
-];
+import agaveField from "../../public/2.jpg";
+import distillery from "../../public/3.jpg";
+import { useLang } from "@/lib/i18n";
 
 const AboutSection = () => {
+  const { t } = useLang();
+  const a = t.about;
+
   return (
     <section id="about" className="py-24 md:py-32 bg-gradient-dark">
       <div className="container mx-auto px-4">
@@ -24,9 +21,9 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <p className="font-body text-sm tracking-[0.4em] uppercase text-gold mb-4">About Us</p>
+          <p className="font-body text-sm tracking-[0.4em] uppercase text-gold mb-4">{a.sectionTag}</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-            NNM Import & Export
+            {a.heading}
           </h2>
           <div className="divider-gold h-px w-32 mx-auto" />
         </motion.div>
@@ -53,13 +50,10 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h3 className="font-display text-3xl text-foreground">Who We Are</h3>
+            <h3 className="font-display text-3xl text-foreground">{a.whoTag}</h3>
+            <p className="font-body text-muted-foreground leading-relaxed">{a.whoBody1}</p>
             <p className="font-body text-muted-foreground leading-relaxed">
-              NNM IE Inc. is a federally incorporated company established in 2024, operating across Canada.
-              We specialize in the trade of consumer goods — both for direct and indirect consumption — between Vietnam and Canada.
-            </p>
-            <p className="font-body text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Our Mission:</strong> To empower businesses by facilitating seamless and reliable trade of quality consumer goods between Vietnam and Canada.
+              <strong className="text-foreground">{a.whoMission}</strong> {a.whoMissionBody}
             </p>
           </motion.div>
         </div>
@@ -73,12 +67,12 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6 md:order-1"
           >
-            <h3 className="font-display text-3xl text-foreground">Compliance & Reliability</h3>
+            <h3 className="font-display text-3xl text-foreground">{a.complianceTag}</h3>
             <p className="font-body text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">CPTPP Mastery:</strong> We specialize in maximizing duty-free access under the CPTPP, ensuring all shipments strictly adhere to Rules of Origin to provide our clients with the most competitive tariff treatments.
+              <strong className="text-foreground">{a.cptppLabel}</strong> {a.cptppBody}
             </p>
             <p className="font-body text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Regulatory Precision:</strong> Our team handles full documentation for both markets, from Canadian Export Declarations to Vietnam&apos;s import compliance requirements.
+              <strong className="text-foreground">{a.regLabel}</strong> {a.regBody}
             </p>
           </motion.div>
 
@@ -105,13 +99,13 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <p className="font-body text-sm tracking-[0.4em] uppercase text-gold mb-4">Our Foundation</p>
-          <h3 className="font-display text-3xl text-foreground">Core Values</h3>
+          <p className="font-body text-sm tracking-[0.4em] uppercase text-gold mb-4">{a.valuesTag}</p>
+          <h3 className="font-display text-3xl text-foreground">{a.valuesHeading}</h3>
           <div className="divider-gold h-px w-24 mx-auto mt-6" />
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map((v, i) => (
+          {a.values.map((v, i) => (
             <motion.div
               key={v.label}
               initial={{ opacity: 0, y: 30 }}

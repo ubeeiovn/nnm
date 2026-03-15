@@ -4,15 +4,18 @@ import { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.svg";
+import { useLang } from "@/lib/i18n";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLang();
 
   const links = [
-    { label: "Home", href: "#hero" },
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: t.nav.home, href: "#hero" },
+    { label: t.nav.about, href: "#about" },
+    { label: t.nav.departments, href: "#services" },
+    { label: t.nav.partners, href: "#partners" },
+    { label: t.nav.contact, href: "#contact" },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -47,6 +50,7 @@ const Navbar = () => {
               </a>
             </li>
           ))}
+
         </ul>
 
         {/* Mobile toggle */}

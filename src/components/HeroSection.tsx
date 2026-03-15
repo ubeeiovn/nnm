@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "../../public/1.jpg";
+import { useLang } from "@/lib/i18n";
 
 const HeroSection = () => {
+  const { t } = useLang();
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -22,7 +24,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="font-body text-sm tracking-[0.4em] uppercase text-gold mb-6"
         >
-          NNM Import & Export Inc
+          {t.hero.tagline}
         </motion.p>
 
         <motion.h1
@@ -31,10 +33,10 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-gradient-gold leading-tight mb-6"
         >
-          Quality Goods,
+          {t.hero.heading1}
           <br />
           <span className="text-foreground italic font-normal text-4xl md:text-5xl lg:text-6xl">
-            seamlessly traded
+            {t.hero.heading2}
           </span>
         </motion.h1>
 
@@ -51,8 +53,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mb-10"
         >
-          A federally incorporated Canadian company empowering businesses
-          through reliable trade of consumer goods between Vietnam and Canada.
+          {t.hero.body}
         </motion.p>
 
         <motion.a
@@ -62,7 +63,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="inline-block border border-gold px-10 py-4 font-body text-sm tracking-widest uppercase text-gold hover:bg-accent hover:text-accent-foreground transition-all duration-500"
         >
-          Request a Quotation
+          {t.hero.cta}
         </motion.a>
       </div>
     </section>
