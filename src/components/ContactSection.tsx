@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 const ContactSection = () => {
@@ -9,9 +9,9 @@ const ContactSection = () => {
   const c = t.contact;
 
   const items = [
-    { icon: Mail, label: c.email, value: "info@nnmimportexport.com", href: "mailto:info@nnmimportexport.com" },
-    { icon: Phone, label: c.phone, value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: MapPin, label: c.location, value: "Canada", href: null },
+    { icon: Mail, label: c.email, value: "info@nnmie.com", href: "mailto:info@nnmie.com" },
+    { icon: Mail, label: c.email, value: "tim@nnmie.com", href: "mailto:tim@nnmie.com" },
+    { icon: MapPin, label: c.location, value: "Ottawa, Ontario", href: null },
   ];
 
   return (
@@ -35,7 +35,7 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {items.map((item, i) => (
             <motion.div
-              key={item.label}
+              key={item.value}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
